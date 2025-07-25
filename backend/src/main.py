@@ -11,7 +11,7 @@ from src.routes.complaint import complaint_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'
-app.config['MAX_CONTENT_LENGTH'] = 25 * 1024 * 1024  # 25MB max file upload
+app.config['MAX_CONTENT_LENGTH'] = 100 * 1024 * 1024  # 100MB max file upload
 
 # Enable CORS for all routes
 CORS(app)
