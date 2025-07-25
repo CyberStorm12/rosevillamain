@@ -344,7 +344,7 @@ function App() {
             </Button>
             
             <p className="text-pink-600 text-center text-sm">
-              পানি নাই? নাকি ছোটখাটো সমস্যা? Just whatspp us
+              পানি নাই? নাকি ছোটখাটো সমস্যা? Just WhatsApp us
             </p>
           </CardContent>
         </Card>
