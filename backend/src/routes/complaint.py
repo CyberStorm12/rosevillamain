@@ -16,7 +16,7 @@ FROM_EMAIL = "hello@fashionpalletbd.xyz"  # Verified sender email
 # Configure upload folder
 UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'uploads')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif', 'webp'}
-MAX_FILE_SIZE = 25 * 1024 * 1024  # 25MB
+MAX_FILE_SIZE = 100 * 1024 * 1024  # 100MB
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
@@ -53,7 +53,7 @@ def submit_complaint():
                     if file_size > MAX_FILE_SIZE:
                         return jsonify({
                             'success': False,
-                            'message': 'Image file is too large. Maximum size is 25MB.'
+                            'message': 'Image file is too large. Maximum size is 100MB.'
                         }), 400
                     
                     # Read image data directly

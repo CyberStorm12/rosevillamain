@@ -31,10 +31,10 @@ function App() {
   const handleImageChange = (e) => {
     const file = e.target.files[0]
     if (file) {
-      // Check file size (25MB = 25 * 1024 * 1024 bytes)
-      const maxSize = 25 * 1024 * 1024
+      // Check file size (100MB = 100 * 1024 * 1024 bytes)
+      const maxSize = 100 * 1024 * 1024
       if (file.size > maxSize) {
-        alert('File size is too large. Maximum size allowed is 25MB.')
+        alert('File size is too large. Maximum size allowed is 100MB.')
         e.target.value = '' // Clear the input
         return
       }
